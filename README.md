@@ -35,8 +35,9 @@ We utilized well performed [spleeter](https://github.com/deezer/spleeter) librar
 
 ```bash
 cd /opt/scripts/source_separation
-
+./run_demo.sh
 ```  
+The script will try to separate each audio in ./sample_aduio folders into two files, one  \*\_bgm.wav one \*\_speech.wav, both mono 16kHz 16bit liner PCM wav format. The rest of automatic processing will be performed on the  \*\_speech.wav file, which is considered to be the speech channel of original audio. 
 
 ## 3. Data pre-filtering: language/accent identification
 Reference. Cite original paper & code.
