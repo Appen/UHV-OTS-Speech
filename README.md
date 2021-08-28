@@ -103,7 +103,10 @@ Reference. Cite original paper & code.
 
 # UHV-OTS dataset format
 
-# Sample codes to parse/convert UHV-OTS data format to Kaldi style data format
+Detailed exaplanation of UHV-OTS dataset format is [attached here](./datasetformat.md). 
+
+
+# Sample codes to parse UHV-OTS dataset to Kaldi style format
 
 # Speech Annotation Instruction
 
@@ -113,20 +116,14 @@ Detailed annotation guideline is [attached here](./AnnotationGuideline.md).
 
 ## Software license
 
-MIT or Apache 2 license
+The code and pre-trained models of our speech data pre-processing and pre-tagging pipeline are under the Apache 2.0 license to allow reproduction of the results reported in the paper. 
 
 ## Dataset license
 
-CC-BY-SA for future
+The UHV-OTS speech corpora development is an ongoing, long-term Appen project to support commercial and academic research data needs for tasks related to speech processing.  
 
-Here is the list
-- item 1
-- item 2
+Dataset consumers can visit https://appen.com/off-the-shelf-datasets/ to order existing datasets or contact us to discuss their specific dataset needs. Appen will consolidate those needs and adjust our UHV-OTS delivery pipeline accordingly, to deliver datasets of highest demand.  
 
-
-Here is the task list
-
-- [x] done item1
-- [ ] wip item 2
+Appen will donate a number of free speech datasets from the UHV-OTS each year to support academic and open source community research under the CC-BY-SA license. These free datasets will be downloadable from Appen's https://appen.com/open-source-datasets/ website. The first batch of free available dataset will be released in late of 2021.  
 
 # References
