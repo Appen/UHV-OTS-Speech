@@ -1,0 +1,70 @@
+
+data_folder: /data/VoxCeleb/VoxCeleb1
+output_folder: /opt/data/output
+
+save_folder: model/
+
+
+device: 'cuda:0'
+#device: 'cpu'
+
+verification_file: /opt/data/save/veri.txt
+
+pretrain_path: speechbrain/spkrec-xvect-voxceleb
+
+train_data: embeddings/train_gender_voxceleb1_ots_asr001_asr003_voxceleb2_shuf_300000.csv
+#
+#enrol_data: /opt/data/exp_mlp_gender/enrol_gender.csv
+#test_data: /opt/data/exp_mlp_gender/test_gender_voxceleb1.csv
+#
+enrol_data: embeddings/enrol_gender.csv
+test_data: embeddings/test_gender_voxceleb1.csv
+
+batch_size: 32
+
+n_train_snts: 300000
+
+
+# Feature parameters
+n_mels: 24
+emb_dim: 512
+
+# Dataloader options
+train_dataloader_opts:
+    batch_size: !ref <batch_size>
+
+enrol_dataloader_opts:
+    batch_size: !ref <batch_size>
+
+test_dataloader_opts:
+    batch_size: !ref <batch_size>
+
+# Model params
+compute_features: !new:speechbrain.lobes.features.Fbank
+    n_mels: !ref <n_mels>
+
+mean_var_norm: !new:speechbrain.processing.features.InputNormalization
+    norm_type: sentence
+    std_norm: False
+
+embedding_model: !new:speechbrain.lobes.models.Xvector.Xvector
+    in_channels: !ref <n_mels>
+    activation: !name:torch.nn.LeakyReLU
+    tdnn_blocks: 5
+    tdnn_channels: [512, 512, 512, 512, 1500]
+    tdnn_kernel_sizes: [5, 3, 3, 1, 1]
+    tdnn_dilations: [1, 2, 3, 1, 1]
+    lin_neurons: !ref <emb_dim>
+
+mean_var_norm_emb: !new:speechbrain.processing.features.InputNormalization
+    norm_type: global
+    std_norm: False
+
+pretrainer: !new:speechbrain.utils.parameter_transfer.Pretrainer
+    collect_in: !ref <save_folder>
+    loadables:
+        embedding_model: !ref <embedding_model>
+        mean_var_norm_emb: !ref <mean_var_norm_emb>
+    paths:
+        embedding_model: !ref <pretrain_path>/embedding_model.ckpt
+        mean_var_norm_emb: !ref <pretrain_path>/mean_var_norm_emb.ckpt
