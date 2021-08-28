@@ -16,15 +16,24 @@ This paper introduces a human-in-the-loop (HITL) data annotation pipeline to gen
 # Reproduce the automated machine pre-labeling results reported in the paper
 
 ## 0. Experiment envirionments setup
+We use docker to run all the experiments and data processing for the corpora construction. To illustrate the algorithms used in the automatic modules in our pipeline, we build this docker enveronment containing all the testing scripts or demo scripts of each module. After you git cloned this repo, please run the docker build command like in below.
 ```bash
-
+cd UHV-OTS-Speech
+docker build -t uhv-ots-speech-demo:latest ./
 ```  
+After the images has been built,please docker run the image in a container.
+```bash
+docker run -it uhv-ots-speech-demo:latest /bin/bash
+```
+Inside the container, in `/opt/scripts`, there are several sub folder, each of which is the testing/demo scripts of a module.
 
 ## 1. Data pre-filtering: synthetic speech detection
+We utlized the algorithm propposed in [Towards End-to-End Synthetic Speech Detection](https://arxiv.org/abs/2106.06341) and adopted the library and pre-trained models in authors's github [repo](https://github.com/ghuawhu/end-to-end-synthetic-speech-detection). The original work achieved synthetic speech detection EER as low as 2.16% on in-domain testing data and 1.95% on cross-domain data. We developped a simple demo script to run a part of the [ASVspoof2019](https://datashare.ed.ac.uk/handle/10283/3336) and give out the detection results and likelihood. 
 
-Reference. Cite original paper & code.
+Inside the container, please run the following command to sReference. Cite original paper & code.
 
 ```bash
+cd 
 
 ```  
 
@@ -37,7 +46,7 @@ We utilized well performed [spleeter](https://github.com/deezer/spleeter) librar
 cd /opt/scripts/source_separation
 ./run_demo.sh
 ```  
-The script will try to separate each audio in **./sample_aduio** folders into two files, one  **\*\_bgm.wav* one **\*\_speech.wav**, both in **mono 16kHz 16bit liner PCM wav** format. The rest of automatic processing will be performed on the  **\*\_speech.wav*** file, which is considered to be the speech channel of original audio. 
+The script will try to separate each audio in **./sample_aduio** folders into two files, one  **\*\_bgm.wav** one **\*\_speech.wav**, both in **mono 16kHz 16bit liner PCM wav** format. The rest of automatic processing will be performed on the  **\*\_speech.wav** file, which is considered to be the speech channel of original audio. 
 
 ## 3. Data pre-filtering: language/accent identification
 Reference. Cite original paper & code.
