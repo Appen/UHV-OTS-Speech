@@ -1,0 +1,1 @@
+python3 syn_speech_e2e_s3_test.py /opt/end-to-end-synthetic-speech-detection/pretrained/Res_TSSDNet_time_frame_61_ASVspoof2019_LA_Loss_0.0017_dEER_0.74%_eEER_1.64%.pth data/test1/test_protocol.txt data/test1/test_flac/
