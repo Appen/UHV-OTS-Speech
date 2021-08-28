@@ -1,0 +1,9 @@
+3`_B 4_B @_B @`_B A_B D_B E_B E:_B I_B N_B O_B OI_B S_B T_B U_B V_B Z_B aI_B aU_B b_B d_B dZ_B eI_B f_B g_B h_B i_B j_B k_B l_B m_B n_B oU_B p_B r_B s_B t_B tS_B u_B v_B w_B z_B {_B 
+3`_E 4_E @_E @`_E A_E D_E E_E E:_E I_E N_E O_E OI_E S_E T_E U_E V_E Z_E aI_E aU_E b_E d_E dZ_E eI_E f_E g_E h_E i_E j_E k_E l_E m_E n_E oU_E p_E r_E s_E t_E tS_E u_E v_E w_E z_E {_E 
+3`_I 4_I @_I @`_I A_I D_I E_I E:_I I_I N_I O_I OI_I S_I T_I U_I V_I Z_I aI_I aU_I b_I d_I dZ_I eI_I f_I g_I h_I i_I j_I k_I l_I m_I n_I oU_I p_I r_I s_I t_I tS_I u_I v_I w_I z_I {_I 
+3`_S 4_S @_S @`_S A_S D_S E_S E:_S I_S N_S O_S OI_S S_S T_S U_S V_S Z_S aI_S aU_S b_S d_S dZ_S eI_S f_S g_S h_S i_S j_S k_S l_S m_S n_S oU_S p_S r_S s_S t_S tS_S u_S v_S w_S z_S {_S 
+SIL LAUGHTER NOISE OOV SPN BRH CGH NSN SMK UHH UM 
+SIL_B LAUGHTER_B NOISE_B OOV_B SPN_B BRH_B CGH_B NSN_B SMK_B UHH_B UM_B 
+SIL_E LAUGHTER_E NOISE_E OOV_E SPN_E BRH_E CGH_E NSN_E SMK_E UHH_E UM_E 
+SIL_I LAUGHTER_I NOISE_I OOV_I SPN_I BRH_I CGH_I NSN_I SMK_I UHH_I UM_I 
+SIL_S LAUGHTER_S NOISE_S OOV_S SPN_S BRH_S CGH_S NSN_S SMK_S UHH_S UM_S 

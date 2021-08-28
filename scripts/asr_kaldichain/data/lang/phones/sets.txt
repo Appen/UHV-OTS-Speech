@@ -1,0 +1,54 @@
+SIL SIL_B SIL_E SIL_I SIL_S
+LAUGHTER LAUGHTER_B LAUGHTER_E LAUGHTER_I LAUGHTER_S
+NOISE NOISE_B NOISE_E NOISE_I NOISE_S
+OOV OOV_B OOV_E OOV_I OOV_S
+SPN SPN_B SPN_E SPN_I SPN_S
+BRH BRH_B BRH_E BRH_I BRH_S
+CGH CGH_B CGH_E CGH_I CGH_S
+NSN NSN_B NSN_E NSN_I NSN_S
+SMK SMK_B SMK_E SMK_I SMK_S
+UHH UHH_B UHH_E UHH_I UHH_S
+UM UM_B UM_E UM_I UM_S
+3`_B 3`_E 3`_I 3`_S
+4_B 4_E 4_I 4_S
+@_B @_E @_I @_S
+@`_B @`_E @`_I @`_S
+A_B A_E A_I A_S
+D_B D_E D_I D_S
+E_B E_E E_I E_S
+E:_B E:_E E:_I E:_S
+I_B I_E I_I I_S
+N_B N_E N_I N_S
+O_B O_E O_I O_S
+OI_B OI_E OI_I OI_S
+S_B S_E S_I S_S
+T_B T_E T_I T_S
+U_B U_E U_I U_S
+V_B V_E V_I V_S
+Z_B Z_E Z_I Z_S
+aI_B aI_E aI_I aI_S
+aU_B aU_E aU_I aU_S
+b_B b_E b_I b_S
+d_B d_E d_I d_S
+dZ_B dZ_E dZ_I dZ_S
+eI_B eI_E eI_I eI_S
+f_B f_E f_I f_S
+g_B g_E g_I g_S
+h_B h_E h_I h_S
+i_B i_E i_I i_S
+j_B j_E j_I j_S
+k_B k_E k_I k_S
+l_B l_E l_I l_S
+m_B m_E m_I m_S
+n_B n_E n_I n_S
+oU_B oU_E oU_I oU_S
+p_B p_E p_I p_S
+r_B r_E r_I r_S
+s_B s_E s_I s_S
+t_B t_E t_I t_S
+tS_B tS_E tS_I tS_S
+u_B u_E u_I u_S
+v_B v_E v_I v_S
+w_B w_E w_I w_S
+z_B z_E z_I z_S
+{_B {_E {_I {_S

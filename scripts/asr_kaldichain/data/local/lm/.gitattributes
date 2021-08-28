@@ -1,0 +1,5 @@
+lm_fglarge.arpa.gz filter=lfs diff=lfs merge=lfs -text
+lm_tglarge.arpa.gz filter=lfs diff=lfs merge=lfs -text
+lm_tgmed.arpa.gz filter=lfs diff=lfs merge=lfs -text
+lm_tgsmall.arpa.gz filter=lfs diff=lfs merge=lfs -text
+lm_vglarge.arpa.gz filter=lfs diff=lfs merge=lfs -text
