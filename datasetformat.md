@@ -76,8 +76,7 @@ asd123efs-123.json=
     "duration_in_seconds": 15.3,
     "domains": ["sports"],
     "topics": ["sports", "basketball", "nba"],
-    "transcription": "Westbrook had thirty five points, fourteen 
-      rebounds and twenty one assists to lead Washington to a win."
+    "transcription": "Westbrook had thirty five points, fourteen rebounds and twenty one assists to lead Washington to a win.",
     "language": "English",
     "accent": "en-us",
     "gender":  "male",
