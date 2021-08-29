@@ -101,12 +101,10 @@ Reference. Cite original paper & code.
 ```  
 
 ## 7. Data pre-tagging: gender detection
-
-Reference. Cite original paper & code.
-
+An x-vector embedding model plus Multi-layer Perceptron (MLP) classifier framework is implemented gender_detection folder. Our gender detection model235achieved 99.85% accuracy on VoxCeleb1 testing set in [VoxCeleb: a large-scale speaker identification dataset](https://arxiv.org/abs/1706.08612), which can be downloaded by running
 
 ```bash
-
+./download.sh
 ```  
 
 
