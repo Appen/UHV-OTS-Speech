@@ -1,0 +1,1712 @@
+2021-08-27 02:31:57,933 - speechbrain.core - INFO - Beginning experiment!
+2021-08-27 02:31:57,934 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-27 02:31:58,373 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-27 02:31:58,390 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-27 02:31:58,414 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-27 22:53:35,986 - speechbrain.core - INFO - Beginning experiment!
+2021-08-27 22:53:35,987 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-27 22:53:36,445 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-27 22:53:36,467 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-27 22:53:36,490 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-27 22:53:51,030 - voxceleb_prepare - INFO - preparing enrol csv
+2021-08-27 22:54:18,581 - voxceleb_prepare - INFO - preparing test csv
+2021-08-27 22:54:24,004 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 273, in <module>
+    train_dataloader, enrol_dataloader, test_dataloader = dataio_prep(params)
+  File "speaker_verification_cosine.py", line 176, in dataio_prep
+    train_data = sb.dataio.dataset.DynamicItemDataset.from_csv(
+  File "/data3/speechbrain/speechbrain/dataio/dataset.py", line 366, in from_csv
+    data = load_data_csv(csv_path, replacements)
+  File "/data3/speechbrain/speechbrain/dataio/dataio.py", line 128, in load_data_csv
+    with open(csv_path, newline="") as csvfile:
+FileNotFoundError: [Errno 2] No such file or directory: 'results/voxceleb1_2/speaker_verification_ecapa_big/save//train.csv'
+2021-08-27 23:12:29,385 - speechbrain.core - INFO - Beginning experiment!
+2021-08-27 23:12:29,386 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-27 23:12:29,849 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-27 23:12:29,867 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-27 23:12:29,896 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-27 23:50:55,294 - speechbrain.core - INFO - Beginning experiment!
+2021-08-27 23:50:55,295 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-27 23:50:55,741 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-27 23:50:55,756 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-28 00:07:55,079 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:07:55,080 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:07:55,541 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-28 00:07:55,558 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-28 00:07:55,595 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-28 00:08:13,942 - voxceleb_prepare - INFO - 	"Creating csv lists in  results/voxceleb1_2/speaker_verification_ecapa_big/save/train.csv..."
+2021-08-28 00:10:34,551 - voxceleb_prepare - INFO - 	results/voxceleb1_2/speaker_verification_ecapa_big/save/train.csv successfully created!
+2021-08-28 00:10:34,688 - voxceleb_prepare - INFO - 	"Creating csv lists in  results/voxceleb1_2/speaker_verification_ecapa_big/save/dev.csv..."
+2021-08-28 00:15:43,223 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:15:43,224 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:15:43,684 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-28 00:15:43,701 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-28 00:15:43,736 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-28 00:15:58,201 - voxceleb_prepare - INFO - preparing enrol csv
+2021-08-28 00:16:03,530 - voxceleb_prepare - INFO - preparing test csv
+2021-08-28 00:16:08,924 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 273, in <module>
+    enrol_dataloader, test_dataloader = dataio_prep(params)
+  File "speaker_verification_cosine.py", line 217, in dataio_prep
+    train_data, **params["train_dataloader_opts"]
+NameError: name 'train_data' is not defined
+2021-08-28 00:16:52,932 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:16:52,933 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:16:53,357 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-28 00:16:53,373 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-28 00:16:53,408 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 00:16:53,527 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 273, in <module>
+    enrol_dataloader, test_dataloader = dataio_prep(params)
+  File "speaker_verification_cosine.py", line 226, in dataio_prep
+    return train_dataloader, enrol_dataloader, test_dataloader
+NameError: name 'train_dataloader' is not defined
+2021-08-28 00:17:41,632 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:17:41,632 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:17:42,079 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-28 00:17:42,093 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-28 00:17:42,117 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 00:17:42,210 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 00:17:42,210 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Delegating to Huggingface hub, source speechbrain/spkrec-ecapa-voxceleb.
+2021-08-28 00:17:42,219 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2021-08-28 00:17:42,541 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/1.1" 302 0
+2021-08-28 00:17:42,546 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 00:17:46,179 - __main__ - INFO - Computing enroll/test embeddings...
+2021-08-28 00:18:49,406 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 287, in <module>
+    enrol_dict = compute_embedding_loop(enrol_dataloader)
+  File "speaker_verification_cosine.py", line 69, in compute_embedding_loop
+    emb = compute_embedding(wavs, lens).unsqueeze(1)
+  File "speaker_verification_cosine.py", line 43, in compute_embedding
+    embeddings = params["embedding_model"](feats, wav_lens)
+  File "/home/ubuntu/anaconda3/envs/py388/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data3/speechbrain/speechbrain/lobes/models/ECAPA_TDNN.py", line 468, in forward
+    x = self.asp(x, lengths=lengths)
+  File "/home/ubuntu/anaconda3/envs/py388/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data3/speechbrain/speechbrain/lobes/models/ECAPA_TDNN.py", line 253, in forward
+    attn = self.conv(self.tanh(self.tdnn(attn)))
+  File "/home/ubuntu/anaconda3/envs/py388/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data3/speechbrain/speechbrain/lobes/models/ECAPA_TDNN.py", line 72, in forward
+    return self.norm(self.activation(self.conv(x)))
+  File "/home/ubuntu/anaconda3/envs/py388/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data3/speechbrain/speechbrain/nnet/CNN.py", line 394, in forward
+    x = self._manage_padding(
+  File "/data3/speechbrain/speechbrain/nnet/CNN.py", line 446, in _manage_padding
+    x = F.pad(x, padding, mode=self.padding_mode)
+  File "/home/ubuntu/anaconda3/envs/py388/lib/python3.8/site-packages/torch/nn/functional.py", line 4159, in _pad
+    return torch._C._nn.reflection_pad1d(input, pad)
+RuntimeError: CUDA out of memory. Tried to allocate 136.00 MiB (GPU 1; 7.44 GiB total capacity; 418.56 MiB already allocated; 99.81 MiB free; 630.00 MiB reserved in total by PyTorch)
+2021-08-28 00:19:29,020 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:19:29,021 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:19:29,486 - speechbrain.utils.superpowers - DEBUG - appdirs==1.4.4
+attrs==21.2.0
+black==19.10b0
+certifi==2021.5.30
+cfgv==3.3.0
+chardet==4.0.0
+click==8.0.1
+distlib==0.3.2
+entrypoints==0.3
+filelock==3.0.12
+flake8==3.7.9
+huggingface-hub==0.0.10
+HyperPyYAML==1.0.0
+identify==2.2.10
+idna==2.10
+iniconfig==1.1.1
+joblib==1.0.1
+mccabe==0.6.1
+more-itertools==8.8.0
+nodeenv==1.6.0
+numpy==1.20.3
+packaging==20.9
+pathspec==0.8.1
+pluggy==0.13.1
+pre-commit==2.13.0
+py==1.10.0
+pycodestyle==2.5.0
+pyflakes==2.1.1
+pyparsing==2.4.7
+pytest==5.4.1
+PyYAML==5.4.1
+regex==2021.4.4
+requests==2.25.1
+ruamel.yaml==0.17.9
+ruamel.yaml.clib==0.2.2
+scikit-learn==0.24.2
+scipy==1.6.3
+sentencepiece==0.1.95
+six==1.16.0
+sklearn==0.0
+-e git+https://github.com/speechbrain/speechbrain.git@8f3fa997c10deec5a6b07b3613c9218135b00767#egg=speechbrain
+threadpoolctl==2.1.0
+toml==0.10.2
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.1
+typed-ast==1.4.3
+typing-extensions==3.10.0.0
+urllib3==1.26.5
+virtualenv==20.4.7
+wcwidth==0.2.5
+yamllint==1.23.0
+
+
+2021-08-28 00:19:29,501 - speechbrain.utils.superpowers - DEBUG - 8f3fa99
+
+
+2021-08-28 00:19:29,534 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 00:19:29,648 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 00:19:29,648 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Using existing file/symlink in results/voxceleb1_2/speaker_verification_ecapa_big/save/embedding_model.ckpt.
+2021-08-28 00:19:29,648 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 00:19:33,043 - __main__ - INFO - Computing enroll/test embeddings...
+2021-08-28 00:23:10,395 - __main__ - INFO - Computing EER..
+2021-08-28 00:23:23,764 - __main__ - INFO - EER(%)=0.174973
+2021-08-28 00:23:31,184 - __main__ - INFO - minDCF=0.002492
+2021-08-28 00:46:33,396 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:46:33,396 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:46:33,966 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 00:46:33,996 - voxceleb_prepare - INFO - Extracting /data6/VoxCeleb/VoxCeleb1/vox1_test_wav.zip to /data6/VoxCeleb/VoxCeleb1
+2021-08-28 00:46:33,996 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 261, in <module>
+    prepare_voxceleb(
+  File "/opt/scripts/SpeakerRec/voxceleb_prepare.py", line 115, in prepare_voxceleb
+    shutil.unpack_archive(os.path.join(source, TEST_WAV), data_folder)
+  File "/usr/lib/python3.8/shutil.py", line 1241, in unpack_archive
+    func(filename, extract_dir, **kwargs)
+  File "/usr/lib/python3.8/shutil.py", line 1136, in _unpack_zipfile
+    raise ReadError("%s is not a zip file" % filename)
+shutil.ReadError: /data6/VoxCeleb/VoxCeleb1/vox1_test_wav.zip is not a zip file
+2021-08-28 00:48:14,890 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:48:14,891 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:48:15,408 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 00:48:15,439 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-28 00:48:15,440 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 261, in <module>
+    prepare_voxceleb(
+  File "/opt/scripts/SpeakerRec/voxceleb_prepare.py", line 139, in prepare_voxceleb
+    wav_lst_train, wav_lst_dev = _get_utt_split_lists(
+  File "/opt/scripts/SpeakerRec/voxceleb_prepare.py", line 262, in _get_utt_split_lists
+    for line in open(verification_pairs_file)
+FileNotFoundError: [Errno 2] No such file or directory: '/data3/speechbrain/recipes/VoxCeleb/SpeakerRec/results/voxceleb1_2/speaker_verification_ecapa_big/save/veri_test.txt'
+2021-08-28 00:52:09,296 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:52:09,296 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:52:09,850 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 00:52:09,878 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-28 00:52:09,879 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 261, in <module>
+    prepare_voxceleb(
+  File "/opt/scripts/SpeakerRec/voxceleb_prepare.py", line 139, in prepare_voxceleb
+    wav_lst_train, wav_lst_dev = _get_utt_split_lists(
+  File "/opt/scripts/SpeakerRec/voxceleb_prepare.py", line 262, in _get_utt_split_lists
+    for line in open(verification_pairs_file)
+FileNotFoundError: [Errno 2] No such file or directory: '/data3/speechbrain/recipes/VoxCeleb/SpeakerRec/results/voxceleb1_2/speaker_verification_ecapa_big/save/veri_test.txt'
+2021-08-28 00:55:46,032 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:55:46,032 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:55:46,596 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 00:55:46,627 - voxceleb_prepare - INFO - 	Creating csv file for the VoxCeleb Dataset..
+2021-08-28 00:56:02,073 - voxceleb_prepare - INFO - preparing enrol csv
+2021-08-28 00:56:16,837 - voxceleb_prepare - INFO - preparing test csv
+2021-08-28 00:56:22,331 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 00:56:22,332 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Delegating to Huggingface hub, source speechbrain/spkrec-ecapa-voxceleb.
+2021-08-28 00:56:22,339 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2021-08-28 00:56:22,654 - urllib3.connectionpool - DEBUG - https://huggingface.co:443 "HEAD /speechbrain/spkrec-ecapa-voxceleb/resolve/main/embedding_model.ckpt HTTP/1.1" 302 0
+2021-08-28 00:56:22,658 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 00:56:22,661 - speechbrain.core - ERROR - Exception:
+Traceback (most recent call last):
+  File "speaker_verification_cosine.py", line 281, in <module>
+    params["pretrainer"].load_collected(params["device"])
+  File "/usr/local/lib/python3.8/dist-packages/speechbrain/utils/parameter_transfer.py", line 203, in load_collected
+    self._call_load_hooks(paramfiles, device)
+  File "/usr/local/lib/python3.8/dist-packages/speechbrain/utils/parameter_transfer.py", line 218, in _call_load_hooks
+    default_hook(obj, loadpath, device=device)
+  File "/usr/local/lib/python3.8/dist-packages/speechbrain/utils/checkpoints.py", line 143, in torch_parameter_transfer
+    torch.load(path, map_location=device), strict=False
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 607, in load
+    return _load(opened_zipfile, map_location, pickle_module, **pickle_load_args)
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 882, in _load
+    result = unpickler.load()
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 857, in persistent_load
+    load_tensor(data_type, size, key, _maybe_decode_ascii(location))
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 846, in load_tensor
+    loaded_storages[key] = restore_location(storage, location)
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 824, in restore_location
+    return default_restore_location(storage, map_location)
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 175, in default_restore_location
+    result = fn(storage, location)
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 151, in _cuda_deserialize
+    device = validate_cuda_device(location)
+  File "/usr/local/lib/python3.8/dist-packages/torch/serialization.py", line 142, in validate_cuda_device
+    raise RuntimeError('Attempting to deserialize object on CUDA device '
+RuntimeError: Attempting to deserialize object on CUDA device 1 but torch.cuda.device_count() is 1. Please use torch.load with map_location to map your storages to an existing device.
+2021-08-28 00:59:09,839 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 00:59:09,840 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 00:59:10,358 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 00:59:10,387 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 00:59:10,508 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 00:59:10,509 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Using existing file/symlink in results/voxceleb1_2/speaker_verification_ecapa_big/save/embedding_model.ckpt.
+2021-08-28 00:59:10,509 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 00:59:13,937 - __main__ - INFO - Computing enroll/test embeddings...
+2021-08-28 01:02:45,523 - __main__ - INFO - Computing EER..
+2021-08-28 01:02:58,341 - __main__ - INFO - EER(%)=0.174973
+2021-08-28 01:03:05,616 - __main__ - INFO - minDCF=0.002492
+2021-08-28 01:10:23,504 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 01:10:23,505 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 01:10:24,064 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 01:10:24,094 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 01:10:24,240 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 01:10:24,240 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Using existing file/symlink in results/voxceleb1_2/speaker_verification_ecapa_big/save/embedding_model.ckpt.
+2021-08-28 01:10:24,240 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 01:10:27,721 - __main__ - INFO - Computing enroll/test embeddings...
+2021-08-28 01:13:58,613 - __main__ - INFO - Computing EER..
+2021-08-28 01:14:11,603 - __main__ - INFO - EER(%)=0.174973
+2021-08-28 01:14:19,250 - __main__ - INFO - minDCF=0.002492
+2021-08-28 05:12:45,230 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 05:12:45,231 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 05:12:45,784 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 05:12:45,807 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 05:12:45,905 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 05:12:45,905 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Using existing file/symlink in results/voxceleb1_2/speaker_verification_ecapa_big/save/embedding_model.ckpt.
+2021-08-28 05:12:45,906 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 05:12:49,321 - __main__ - INFO - Computing enroll/test embeddings...
+2021-08-28 05:16:19,386 - __main__ - INFO - Computing EER..
+2021-08-28 05:16:32,245 - __main__ - INFO - EER(%)=0.174973
+2021-08-28 05:16:39,777 - __main__ - INFO - minDCF=0.002492
+2021-08-28 05:19:19,682 - speechbrain.core - INFO - Beginning experiment!
+2021-08-28 05:19:19,683 - speechbrain.core - INFO - Experiment folder: results/voxceleb1_2/speaker_verification_ecapa_big
+2021-08-28 05:19:20,245 - speechbrain.utils.superpowers - DEBUG - absl-py==0.13.0
+anyio==3.2.1
+appdirs==1.4.4
+astunparse==1.6.3
+audioread==2.1.9
+backports.entry-points-selectable==1.1.0
+cachetools==4.2.2
+certifi==2019.11.28
+cffi==1.14.6
+chardet==3.0.4
+charset-normalizer==2.0.3
+click==7.1.2
+cycler==0.10.0
+decorator==4.4.2
+distlib==0.3.2
+docopt==0.6.2
+ffmpeg-python==0.2.0
+filelock==3.0.12
+flatbuffers==2.0
+future==0.18.2
+gast==0.3.3
+google-auth==1.35.0
+google-auth-oauthlib==0.4.5
+google-pasta==0.2.0
+grpcio==1.39.0
+h11==0.12.0
+h2==3.2.0
+h5py==2.10.0
+hpack==3.0.0
+httpcore==0.12.3
+httpx==0.16.1
+huggingface-hub==0.0.15
+hyperframe==5.2.0
+HyperPyYAML==1.0.0
+idna==2.8
+imageio==2.9.0
+imageio-ffmpeg==0.4.4
+importlib-metadata==4.6.1
+intervaltree==3.1.0
+joblib==1.0.1
+kaldi-io==0.9.4
+Keras-Preprocessing==1.1.2
+kiwisolver==1.3.1
+librosa==0.8.0
+llvmlite==0.36.0
+lxml==4.6.3
+Markdown==3.3.4
+matplotlib==3.4.2
+moviepy==1.0.3
+norbert==0.2.1
+numba==0.53.1
+numexpr==2.7.3
+numpy==1.18.5
+oauthlib==3.1.1
+onnxruntime==1.8.1
+opt-einsum==3.3.0
+packaging==21.0
+pandas==1.1.2
+Pillow==8.3.1
+pipreqs==0.4.10
+platformdirs==2.0.2
+pooch==1.4.0
+proglog==0.1.9
+protobuf==3.17.3
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pycurl==7.43.0
+PyGObject==3.20.0
+pyparsing==2.4.7
+python-apt==1.1.0b1+ubuntu0.16.4.12
+python-dateutil==2.8.2
+python-docx==0.8.11
+pytz==2021.1
+PyYAML==5.4.1
+requests==2.22.0
+requests-oauthlib==1.3.0
+requests-unixsocket==0.2.0
+resampy==0.2.2
+Resemblyzer==0.1.1.dev0
+rfc3986==1.5.0
+rsa==4.7.2
+ruamel.yaml==0.17.10
+ruamel.yaml.clib==0.2.6
+scikit-learn==0.24.2
+scipy==1.4.1
+sentencepiece==0.1.96
+six==1.14.0
+sklearn==0.0
+sniffio==1.2.0
+sortedcontainers==2.4.0
+SoundFile==0.10.3.post1
+sox==1.4.1
+speechbrain==0.5.9
+spleeter==2.2.2
+supervisor==4.1.0
+tabulate==0.8.9
+tensorboard==2.6.0
+tensorboard-data-server==0.6.1
+tensorboard-plugin-wit==1.8.0
+tensorflow==2.3.0
+tensorflow-estimator==2.3.0
+termcolor==1.1.0
+threadpoolctl==2.2.0
+torch==1.9.0
+torchaudio==0.9.0
+tqdm==4.61.2
+typer==0.3.2
+typing==3.7.4.3
+typing-extensions==3.10.0.0
+uisrnn==0.1.0
+urllib3==1.25.8
+virtualenv==20.6.0
+webrtcvad==2.0.10
+Werkzeug==2.0.1
+wrapt==1.12.1
+xgboost==1.4.2
+yarg==0.1.9
+youtube-dl==2021.6.6
+youtube-search-python==1.4.6
+zipp==3.5.0
+
+
+2021-08-28 05:19:20,268 - voxceleb_prepare - INFO - Skipping preparation, completed in previous run.
+2021-08-28 05:19:20,365 - speechbrain.utils.parameter_transfer - DEBUG - Collecting files (or symlinks) for pretraining in results/voxceleb1_2/speaker_verification_ecapa_big/save.
+2021-08-28 05:19:20,365 - speechbrain.pretrained.fetching - INFO - Fetch embedding_model.ckpt: Using existing file/symlink in results/voxceleb1_2/speaker_verification_ecapa_big/save/embedding_model.ckpt.
+2021-08-28 05:19:20,365 - speechbrain.utils.parameter_transfer - INFO - Loading pretrained files for: embedding_model
+2021-08-28 05:19:23,868 - __main__ - INFO - Computing enroll/test embeddings...
+2021-08-28 05:22:54,494 - __main__ - INFO - Computing EER..
+2021-08-28 05:23:07,515 - __main__ - INFO - EER(%)=0.174973
+2021-08-28 05:23:14,487 - __main__ - INFO - minDCF=0.002492
