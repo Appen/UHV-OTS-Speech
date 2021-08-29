@@ -93,9 +93,20 @@ Reference. Cite original paper & code.
 
 
 ## 8. Data pre-tagging: speech recognition/transcription
+To run the experiments on Librispeech test-clean and test-other data with our own Chain model, please run the following command to download Librispeech data.
+```bash
+cd /opt/asr_kaldichain
+./download_prepare_extract.sh
+```
 
-Reference. Cite original paper & code.
+The test-clean and test-other data will be downloaded inside the container.
 
+In this module, we trained our own ASR model using Kaldi toolkit introduced in "[The kaldi speech recognition toolkit](https://www.danielpovey.com/files/2011_asru_kaldi.pdf)", specifically using the chain model recipe introduced in "[Purely sequence-trained neural networks for ASR based on lattice-free MMI](https://www.danielpovey.com/files/2016_interspeech_mmi.pdf)", which can be found originally in Kaldi's [repo](https://github.com/kaldi-asr/kaldi). But we trained our model using 11 corpora at hand, including free public corpora, purchased corpora, and self owned corpora.
+
+To run the test on Librispeech test-other and test-clean data with our trained model, please run the following command.
+
+```bash
+./run_test.sh
 
 ```bash
 
