@@ -1,0 +1,29 @@
+# ivector-plda-scoring --normalize-length=true --num-utts=ark:exp/xvectors_enrol/num_utts.ark "ivector-copy-plda --smoothing=0.0 xvectors_train_5000_33lang_cosine/plda - |" "ark:ivector-mean ark:data/train_small/enrol/spk2utt scp:exp/xvectors_enrol/vector.scp ark:- | ivector-subtract-global-mean xvectors_train_5000_33lang_cosine/mean.vec ark:- ark:- | transform-vec xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |" "ark:ivector-subtract-global-mean xvectors_train_5000_33lang_cosine/mean.vec scp:exp/xvectors_dev_cosine/vector.scp ark:- | transform-vec xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |" "cat data/dev/trials_33 | cut -d\  --fields=1,2 |" exp/scores/plda_scores_33_new 
+# Started at Sun Aug 29 05:06:56 UTC 2021
+#
+ivector-plda-scoring --normalize-length=true --num-utts=ark:exp/xvectors_enrol/num_utts.ark 'ivector-copy-plda --smoothing=0.0 xvectors_train_5000_33lang_cosine/plda - |' 'ark:ivector-mean ark:data/train_small/enrol/spk2utt scp:exp/xvectors_enrol/vector.scp ark:- | ivector-subtract-global-mean xvectors_train_5000_33lang_cosine/mean.vec ark:- ark:- | transform-vec xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |' 'ark:ivector-subtract-global-mean xvectors_train_5000_33lang_cosine/mean.vec scp:exp/xvectors_dev_cosine/vector.scp ark:- | transform-vec xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |' 'cat data/dev/trials_33 | cut -d\  --fields=1,2 |' exp/scores/plda_scores_33_new 
+ivector-copy-plda --smoothing=0.0 xvectors_train_5000_33lang_cosine/plda - 
+ERROR (ivector-copy-plda[5.5.512~3-ae7a320]:Input():kaldi-io.cc:756) Error opening input stream xvectors_train_5000_33lang_cosine/plda
+
+[ Stack-Trace: ]
+/home/ubuntu/src/kaldi/src/lib/libkaldi-base.so(kaldi::MessageLogger::LogMessage() const+0x82c) [0x7fb53f1652ba]
+/home/ubuntu/src/kaldi/src/lib/libkaldi-ivector.so(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x7fb53f861595]
+/home/ubuntu/src/kaldi/src/lib/libkaldi-util.so(kaldi::Input::Input(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool*)+0x9e) [0x7fb53f6258fa]
+ivector-copy-plda(main+0x24d) [0x402323]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0) [0x7fb53e81d840]
+ivector-copy-plda(_start+0x29) [0x402009]
+
+kaldi::KaldiFatalErrorERROR (ivector-plda-scoring[5.5.512~3-ae7a320]:ExpectToken():io-funcs.cc:200) Failed to read token [started at file position -1], expected <Plda>
+
+[ Stack-Trace: ]
+/home/ubuntu/src/kaldi/src/lib/libkaldi-base.so(kaldi::MessageLogger::LogMessage() const+0x82c) [0x7fa7538962ba]
+ivector-plda-scoring(kaldi::MessageLogger::LogAndThrow::operator=(kaldi::MessageLogger const&)+0x21) [0x40db0b]
+/home/ubuntu/src/kaldi/src/lib/libkaldi-base.so(kaldi::ExpectToken(std::istream&, bool, char const*)+0x112) [0x7fa753897c2e]
+/home/ubuntu/src/kaldi/src/lib/libkaldi-ivector.so(kaldi::Plda::Read(std::istream&, bool)+0x1e) [0x7fa753f93e50]
+ivector-plda-scoring(main+0x25c) [0x40ba02]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0) [0x7fa752a28840]
+ivector-plda-scoring(_start+0x29) [0x40b6d9]
+
+WARNING (ivector-plda-scoring[5.5.512~3-ae7a320]:Close():kaldi-io.cc:515) Pipe ivector-copy-plda --smoothing=0.0 xvectors_train_5000_33lang_cosine/plda - | had nonzero return status 65280
+kaldi::KaldiFatalError# Accounting: time=0 threads=1
+# Ended (code 255) at Sun Aug 29 05:06:56 UTC 2021, elapsed time 0 seconds

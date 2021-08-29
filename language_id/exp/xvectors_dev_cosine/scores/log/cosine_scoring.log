@@ -1,0 +1,11 @@
+# cat data/dev/trials | awk '{print $1" "$2}' | ivector-compute-dot-products - scp:exp/xvectors_train_small/lang_vector.scp "ark:ivector-normalize-length scp:exp/xvectors_dev_cosine/vector.scp ark:- |" exp/xvectors_dev_cosine/scores/cosine_scores 
+# Started at Mon Mar 22 17:44:52 UTC 2021
+#
+ivector-compute-dot-products - scp:exp/xvectors_train_small/lang_vector.scp 'ark:ivector-normalize-length scp:exp/xvectors_dev_cosine/vector.scp ark:- |' exp/xvectors_dev_cosine/scores/cosine_scores 
+ivector-normalize-length scp:exp/xvectors_dev_cosine/vector.scp ark:- 
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:90) Processed 1609 iVectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 3.59277, standard deviation was 0.471855
+LOG (ivector-compute-dot-products[5.5.512~3-ae7a320]:main():ivector-compute-dot-products.cc:108) Mean dot-product was 188.36, standard deviation was 91.177
+LOG (ivector-compute-dot-products[5.5.512~3-ae7a320]:main():ivector-compute-dot-products.cc:111) Processed 154464 trials 0 had errors.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Mon Mar 22 17:44:54 UTC 2021, elapsed time 2 seconds

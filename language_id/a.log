@@ -1,0 +1,10 @@
+# sid/nnet3/xvector/get_egs.sh --cmd "run.pl --mem 128G" --nj 8 --stage 3 --frames-per-iter 10000000 --frames-per-iter-diagnostic 100000 --min-frames-per-chunk 50 --max-frames-per-chunk 300 --num-diagnostic-archives 3 --num-repeats 500 data/train_no_sil exp/xvect/egs 
+# Started at Wed Mar  3 02:43:32 UTC 2021
+#
+sid/nnet3/xvector/get_egs.sh --cmd run.pl --mem 128G --nj 8 --stage 3 --frames-per-iter 10000000 --frames-per-iter-diagnostic 100000 --min-frames-per-chunk 50 --max-frames-per-chunk 300 --num-diagnostic-archives 3 --num-repeats 500 data/train_no_sil exp/xvect/egs
+feat-to-dim scp:data/train_no_sil/feats.scp - 
+sid/nnet3/xvector/get_egs.sh: Producing 116928 archives for training
+sid/nnet3/xvector/get_egs.sh: Generating training examples on disk
+sid/nnet3/xvector/get_egs.sh: Generating training subset examples on disk
+sid/nnet3/xvector/get_egs.sh: Generating validation examples on disk
+sid/nnet3/xvector/get_egs.sh: Shuffling order of archives on disk

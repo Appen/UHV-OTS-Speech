@@ -1,0 +1,49 @@
+# ivector-compute-plda ark:data/train_5000_33lang/spk2utt "ark:ivector-subtract-global-mean scp:exp/xvectors_train_5000_33lang_cosine/vector.scp ark:- | transform-vec exp/xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- | ivector-normalize-length ark:-  ark:- |" exp/xvectors_train_5000_33lang_cosine/plda 
+# Started at Thu Apr  1 01:15:05 UTC 2021
+#
+ivector-compute-plda ark:data/train_5000_33lang/spk2utt 'ark:ivector-subtract-global-mean scp:exp/xvectors_train_5000_33lang_cosine/vector.scp ark:- | transform-vec exp/xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- | ivector-normalize-length ark:-  ark:- |' exp/xvectors_train_5000_33lang_cosine/plda 
+ivector-subtract-global-mean scp:exp/xvectors_train_5000_33lang_cosine/vector.scp ark:- 
+transform-vec exp/xvectors_train_5000_33lang_cosine/transform.mat ark:- ark:- 
+ivector-normalize-length ark:- ark:- 
+LOG (ivector-subtract-global-mean[5.5.512~3-ae7a320]:main():ivector-subtract-global-mean.cc:76) Read 165000 iVectors.
+LOG (ivector-subtract-global-mean[5.5.512~3-ae7a320]:main():ivector-subtract-global-mean.cc:79) Norm of iVector mean was 36.9458
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:main():ivector-compute-plda.cc:109) Accumulated stats from 33 speakers (0 with no utterances), consisting of 165000 utterances (0 absent from input).
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 0 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5598
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4641
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 1 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5519
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.454
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 2 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5501
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4522
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 3 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5492
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4513
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 4 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5487
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4508
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 5 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5484
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4505
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 6 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5482
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4502
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 7 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.548
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4501
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 8 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5479
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4499
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:Estimate():plda.cc:529) Plda estimation iteration 9 of 10
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:511) Trace of within-class variance is 70.5478
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:EstimateFromStats():plda.cc:512) Trace of between-class variance is 19.4498
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:GetOutput():plda.cc:540) Norm of mean of iVector distribution is 0.0653806
+LOG (ivector-compute-plda[5.5.512~3-ae7a320]:GetOutput():plda.cc:577) Diagonal of between-class variance in normalized space is  [ 3.00194 2.10332 1.86455 1.57311 1.41763 1.28154 1.15229 1.08856 0.979879 0.929942 0.8311 0.765732 0.692031 0.674041 0.617573 0.580355 0.552496 0.534944 0.497328 0.478982 0.430175 0.402372 0.368846 0.353825 0.33431 0.32879 0.284385 0.261847 0.249989 0.221057 0.196786 0.194099 2.0488e-05 2.04805e-05 2.04751e-05 2.04699e-05 2.04675e-05 2.04667e-05 2.0465e-05 2.04645e-05 2.04622e-05 2.04605e-05 2.04593e-05 2.04583e-05 2.04579e-05 2.04549e-05 2.04538e-05 2.0452e-05 2.04517e-05 2.04507e-05 2.04493e-05 2.0449e-05 2.04442e-05 2.0443e-05 2.04422e-05 2.04411e-05 2.04398e-05 2.04389e-05 2.04381e-05 2.04369e-05 2.04357e-05 2.04345e-05 2.04328e-05 2.04319e-05 2.04311e-05 2.04296e-05 2.04283e-05 2.0428e-05 2.04265e-05 2.04235e-05 2.0423e-05 2.04224e-05 2.04209e-05 2.04193e-05 2.04183e-05 2.04179e-05 2.04156e-05 2.04142e-05 2.04121e-05 2.04102e-05 2.04092e-05 2.04083e-05 2.04069e-05 2.04065e-05 2.04047e-05 2.04001e-05 2.03977e-05 2.03958e-05 2.03928e-05 2.03894e-05 ]
+
+LOG (ivector-subtract-global-mean[5.5.512~3-ae7a320]:main():ivector-subtract-global-mean.cc:108) Wrote 165000 mean-subtracted iVectors
+LOG (transform-vec[5.5.512~3-ae7a320]:main():transform-vec.cc:85) Applied transform to 165000 vectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:90) Processed 165000 iVectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 1.10681, standard deviation was 0.21052
+# Accounting: time=18 threads=1
+# Ended (code 0) at Thu Apr  1 01:15:23 UTC 2021, elapsed time 18 seconds
