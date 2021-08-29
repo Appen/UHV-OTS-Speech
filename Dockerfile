@@ -19,7 +19,7 @@ COPY speaker_diarization /opt/scripts/speaker_diarization
 COPY speech_segmentation /opt/scripts/speech_segmentation
 COPY synthetic_detection /opt/scripts/synthetic_detection
 COPY SpeakerRec /opt/scripts/SpeakerRec 
-
+COPY language_id /opt/scripts/language_id
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
@@ -66,12 +66,20 @@ RUN apt-get update && \
     # PYGOBJECT_WITHOUT_PYCAIRO=1 python3 -m pip install --no-build-isolation --no-use-pep517 PyGObject==3.36.0 && \
     python3 -m pip install -r requirements.txt && \
     python3 -m pip install speechbrain sklearn xgboost && \
-    cd /opt && git clone https://github.com/ghuawhu/end-to-end-synthetic-speech-detection.git 
-    #cd /opt && git clone https://github.com/google/uis-rnn && \
-
-RUN /bin/bash -c "virtualenv -p python3 inaSpeechSegEnv && \
+    cd /opt && git clone https://github.com/ghuawhu/end-to-end-synthetic-speech-detection.git && \
+    /bin/bash -c "virtualenv -p python3 inaSpeechSegEnv && \
     source inaSpeechSegEnv/bin/activate && \
     python3 -m pip install tensorflow-gpu && \
     python3 -m pip install tensorflow && \
     python3 -m pip install inaSpeechSegmenter && \
-    deactivate"
+    deactivate" && \
+    chmod -R 777 ./scripts
+ 
+    #cd /opt && git clone https://github.com/google/uis-rnn && \
+
+#RUN /bin/bash -c "virtualenv -p python3 inaSpeechSegEnv && \
+#    source inaSpeechSegEnv/bin/activate && \
+#    python3 -m pip install tensorflow-gpu && \
+#    python3 -m pip install tensorflow && \
+#    python3 -m pip install inaSpeechSegmenter && \
+#    deactivate"

@@ -49,29 +49,44 @@ cd /opt/scripts/source_separation
 The script will try to separate each audio in **./sample_aduio** folders into two files, one  **\*\_bgm.wav** one **\*\_speech.wav**, both in **mono 16kHz 16bit liner PCM wav** format. The rest of automatic processing will be performed on the  **\*\_speech.wav** file, which is considered to be the speech channel of original audio. 
 
 ## 3. Data pre-filtering: language/accent identification
-Reference. Cite original paper & code.
+We apply language identification to pre-filter the raw audio data and ensure that the data is correctly routed to the corresponding language data processing pipeline. We trained a language ID systme based on the x-vector, which was introduced in "[X-VECTORS: ROBUST DNN EMBEDDINGS FOR SPEAKER RECOGNITION](https://www.danielpovey.com/files/2018_icassp_xvectors.pdf)". The x-vector model was trained with the [VoxLingua107](https://arxiv.org/abs/2011.12998) dataset, and the language ID algorithm achieved 93% accuracy on the VoxLingua107 dev set. 
 
-
+The language id module was developped based on the Kaldi recipe. The model and x-vectors have been prepared and stored in this folder, to run the test and get EER, please run the command in below:
 ```bash
-
+cd language_id
+./run_test.sh
 ```  
-
-
+Accent identification is more challenging than language identification. We’ve  adopted  the  x-vector plus LDA/PLDA framework to detect twenty-two different English accents using proprietary data. Our current accent detection accuracy is 75%. The x-vector model and x-vectors of training and testing data were prepared and stored in this folder, same as LDA/PLDA classifier model. To check the performance, please run the command as in below:
+```bash
+cd accent_id
+./run_test.sh
+```
 
 ## 4. Data pre-tagging: speech detection
-Reference. Cite original paper & code.
+This is the folder containing the demo scripts of speech segmentation. The speech segmentation in this folder is adopted from the InaSpeechSegmenter which was introduced in [AN OPEN-SOURCE SPEAKER GENDER DETECTION FRAMEWORK FOR MONITORING GENDER EQUALITY](https://hal.archives-ouvertes.fr/hal-01927560/document). We only used the speech detection module of it  and it's pretrained model, which can be found in the original authors' [repo](https://github.com/ina-foss/inaSpeechSegmenter).
 
-
+The inaSpeechSegmenter system won the first place in the Music and/or Speech Detection in Music Information Retrieval Evaluation eXchange 2018 (MIREX 2018). This module also achieved 97.5\% detection accuracy with an average boundary mismatch of 97ms at Appen's proprietary testset. To run demo of this module, please run the following command:
 ```bash
+cd speech_detection
+./run_demo.sh
+```
+You can check the output csv file in folder ./output
 
-```  
+## 5. Data pre-tagging: speaker diarization
+This is the speaker diarization system developed based on BUT's diarization system introduced in [Analysis of the BUT Diarization System for VoxConverse Challenge](https://arxiv.org/abs/2010.11718).
 
-## 5. Data pre-tagging: speaker segmentation
-Reference. Cite original paper & code.
+The speaker diarization framework generally involves an embedding stage followed by a clustering stage.
 
+We tested the pipeline with [VoxConverse corpus](http://www.robots.ox.ac.uk/~vgg/data/voxconverse), which is an audio-visual diarization dataset consisting of over 50 hours of multi-speaker clips of human speech, extracted from videos collected on the internet.  The DER achieved on VoxConverse using the BUT system is 4.41%, which is consistent with the result in BUT's report.
 
+To download the dataset, please run the command as in following:
 ```bash
-
+cd speaker_diarization
+./download.sh
+```
+After the data downloading, please run the test on VoxConverse data by running the commands in below:
+```bash
+./run_test.sh
 ```  
 
 ## 6. Data pre-tagging: speaker clustering & identification
