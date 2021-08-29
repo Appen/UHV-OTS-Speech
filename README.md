@@ -30,12 +30,14 @@ Inside the container, in `/opt/scripts`, there are several sub folder, each of w
 ## 1. Data pre-filtering: synthetic speech detection
 We utlized the algorithm propposed in [Towards End-to-End Synthetic Speech Detection](https://arxiv.org/abs/2106.06341) and adopted the library and pre-trained models in authors's github [repo](https://github.com/ghuawhu/end-to-end-synthetic-speech-detection). The original work achieved synthetic speech detection EER as low as 2.16% on in-domain testing data and 1.95% on cross-domain data. We developped a simple demo script to run a part of the [ASVspoof2019](https://datashare.ed.ac.uk/handle/10283/3336) and give out the detection results and likelihood. 
 
-Inside the container, please run the following command to sReference. Cite original paper & code.
-
+If the full testing is needed please run the codes in original authors' [repo](https://github.com/ghuawhu/end-to-end-synthetic-speech-detection). Please download the ASVspoof 2019 and 2015 data by running:
+```bash
+./download.sh
+```
+But if only want to see how the module is working, inside the container, please run the following command to sReference. Cite original paper & code.
 ```bash
 cd synthetic_detection
 ./run_demo.sh 
-
 ```  
 
 ## 2. Data pre-processing: music/vocal source separation
