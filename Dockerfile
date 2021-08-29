@@ -10,7 +10,16 @@ COPY requirements.txt /opt
 #COPY batch_lid /opt/batch_lid
 #COPY batch_did /opt/batch_did
 #COPY diarization /opt/diarization
-COPY scripts /opt/scripts
+#COPY scripts /opt/scripts
+RUN mkdir -p /opt/scripts
+COPY asr_kaldichain /opt/scripts/asr_kaldichain
+COPY gender_detection /opt/scripts/gender_detection
+COPY source_separation /opt/scripts/source_separation
+COPY speaker_diarization /opt/scripts/speaker_diarization
+COPY speech_segmentation /opt/scripts/speech_segmentation
+COPY synthetic_detection /opt/scripts/synthetic_detection
+ 
+
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
