@@ -18,7 +18,7 @@ COPY source_separation /opt/scripts/source_separation
 COPY speaker_diarization /opt/scripts/speaker_diarization
 COPY speech_segmentation /opt/scripts/speech_segmentation
 COPY synthetic_detection /opt/scripts/synthetic_detection
- 
+COPY SpeakerRec /opt/scripts/SpeakerRec 
 
 
 RUN apt-get update && \
