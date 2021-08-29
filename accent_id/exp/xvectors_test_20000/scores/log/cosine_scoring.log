@@ -1,0 +1,25 @@
+# cat data/test_20000/trials | awk '{print $1" "$2}' | ivector-compute-dot-products - "ark:ivector-mean ark:data/train_20000/spk2utt scp:exp/xvectors_train_20000/vector.scp ark:- | ivector-subtract-global-mean exp/xvectors_train_20000/mean.vec ark:- ark:- | transform-vec exp/xvectors_train_20000/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |" "ark:ivector-subtract-global-mean exp/xvectors_train_20000/mean.vec scp:exp/xvectors_test_20000/vector.scp ark:- | transform-vec exp/xvectors_train_20000/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |" exp/xvectors_test_20000/scores/cosine_scores 
+# Started at Fri Jun  4 06:13:49 UTC 2021
+#
+ivector-compute-dot-products - 'ark:ivector-mean ark:data/train_20000/spk2utt scp:exp/xvectors_train_20000/vector.scp ark:- | ivector-subtract-global-mean exp/xvectors_train_20000/mean.vec ark:- ark:- | transform-vec exp/xvectors_train_20000/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |' 'ark:ivector-subtract-global-mean exp/xvectors_train_20000/mean.vec scp:exp/xvectors_test_20000/vector.scp ark:- | transform-vec exp/xvectors_train_20000/transform.mat ark:- ark:- | ivector-normalize-length ark:- ark:- |' exp/xvectors_test_20000/scores/cosine_scores 
+ivector-subtract-global-mean exp/xvectors_train_20000/mean.vec ark:- ark:- 
+transform-vec exp/xvectors_train_20000/transform.mat ark:- ark:- 
+ivector-mean ark:data/train_20000/spk2utt scp:exp/xvectors_train_20000/vector.scp ark:- 
+transform-vec exp/xvectors_train_20000/transform.mat ark:- ark:- 
+ivector-subtract-global-mean exp/xvectors_train_20000/mean.vec scp:exp/xvectors_test_20000/vector.scp ark:- 
+ivector-normalize-length ark:- ark:- 
+ivector-normalize-length ark:- ark:- 
+LOG (ivector-mean[5.5.512~3-ae7a320]:main():ivector-mean.cc:134) Computed mean of 22 speakers (0 with no utterances), consisting of 391946 utterances (0 absent from input).
+LOG (ivector-mean[5.5.512~3-ae7a320]:main():ivector-mean.cc:145) Norm of mean of speakers is 43.6155, root-mean-square speaker-iVector length divided by sqrt(dim) is 2.48328
+LOG (ivector-subtract-global-mean[5.5.512~3-ae7a320]:main():ivector-subtract-global-mean.cc:108) Wrote 22 mean-subtracted iVectors
+LOG (transform-vec[5.5.512~3-ae7a320]:main():transform-vec.cc:85) Applied transform to 22 vectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:90) Processed 22 iVectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 0.430227, standard deviation was 0.158642
+LOG (ivector-subtract-global-mean[5.5.512~3-ae7a320]:main():ivector-subtract-global-mean.cc:108) Wrote 2220 mean-subtracted iVectors
+LOG (transform-vec[5.5.512~3-ae7a320]:main():transform-vec.cc:85) Applied transform to 2220 vectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:90) Processed 2220 iVectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 1.03816, standard deviation was 0.228902
+LOG (ivector-compute-dot-products[5.5.512~3-ae7a320]:main():ivector-compute-dot-products.cc:108) Mean dot-product was 0.173635, standard deviation was 11.3282
+LOG (ivector-compute-dot-products[5.5.512~3-ae7a320]:main():ivector-compute-dot-products.cc:111) Processed 48840 trials 0 had errors.
+# Accounting: time=4 threads=1
+# Ended (code 0) at Fri Jun  4 06:13:53 UTC 2021, elapsed time 4 seconds

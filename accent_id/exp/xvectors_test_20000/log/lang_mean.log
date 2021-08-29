@@ -1,0 +1,14 @@
+# ivector-normalize-length scp:exp/xvectors_test_20000/vector.scp ark:- | ivector-mean "ark:utils/utt2spk_to_spk2utt.pl data/test_20000/utt2lang|" ark:- ark:- ark,t:exp/xvectors_test_20000/num_utts.ark | ivector-normalize-length ark:- ark,scp:exp/xvectors_test_20000/lang_vector.ark,exp/xvectors_test_20000/lang_vector.scp 
+# Started at Sat Jun 12 03:46:22 UTC 2021
+#
+ivector-normalize-length scp:exp/xvectors_test_20000/vector.scp ark:- 
+ivector-normalize-length ark:- ark,scp:exp/xvectors_test_20000/lang_vector.ark,exp/xvectors_test_20000/lang_vector.scp 
+ivector-mean 'ark:utils/utt2spk_to_spk2utt.pl data/test_20000/utt2lang|' ark:- ark:- ark,t:exp/xvectors_test_20000/num_utts.ark 
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:90) Processed 2220 iVectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 3.85846, standard deviation was 0.720798
+LOG (ivector-mean[5.5.512~3-ae7a320]:main():ivector-mean.cc:134) Computed mean of 23 speakers (0 with no utterances), consisting of 2220 utterances (0 absent from input).
+LOG (ivector-mean[5.5.512~3-ae7a320]:main():ivector-mean.cc:145) Norm of mean of speakers is 13.5643, root-mean-square speaker-iVector length divided by sqrt(dim) is 0.719394
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:90) Processed 23 iVectors.
+LOG (ivector-normalize-length[5.5.512~3-ae7a320]:main():ivector-normalize-length.cc:94) Average ratio of iVector to expected length was 0.71863, standard deviation was 0.0331456
+# Accounting: time=1 threads=1
+# Ended (code 0) at Sat Jun 12 03:46:23 UTC 2021, elapsed time 1 seconds

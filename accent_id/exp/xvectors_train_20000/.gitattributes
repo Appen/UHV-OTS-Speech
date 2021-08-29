@@ -1,0 +1,12 @@
+xvector.1.ark filter=lfs diff=lfs merge=lfs -text
+xvector.10.ark filter=lfs diff=lfs merge=lfs -text
+xvector.7.ark filter=lfs diff=lfs merge=lfs -text
+xvector.9.ark filter=lfs diff=lfs merge=lfs -text
+xvector.2.ark filter=lfs diff=lfs merge=lfs -text
+xvector.3.ark filter=lfs diff=lfs merge=lfs -text
+xvector.4.ark filter=lfs diff=lfs merge=lfs -text
+xvector.5.ark filter=lfs diff=lfs merge=lfs -text
+xvector.6.ark filter=lfs diff=lfs merge=lfs -text
+xvector.8.ark filter=lfs diff=lfs merge=lfs -text
+vector.txt filter=lfs diff=lfs merge=lfs -text
+vector_norm.txt filter=lfs diff=lfs merge=lfs -text
