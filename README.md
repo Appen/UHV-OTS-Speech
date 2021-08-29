@@ -132,7 +132,7 @@ cd /opt/scripts/asr_kaldichain
 
 ## 9. Data pre-tagging: domain/topic detection
 
-Reference. Cite original paper & code.
+Coming soon.
 
 
 ```bash
