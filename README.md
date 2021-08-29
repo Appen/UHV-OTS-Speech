@@ -33,7 +33,8 @@ We utlized the algorithm propposed in [Towards End-to-End Synthetic Speech Detec
 Inside the container, please run the following command to sReference. Cite original paper & code.
 
 ```bash
-cd 
+cd synthetic_detection
+./run_demo.sh 
 
 ```  
 
