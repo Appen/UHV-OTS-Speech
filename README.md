@@ -25,26 +25,25 @@ After the images has been built,please docker run the image in a container.
 ```bash
 docker run -it uhv-ots-speech-demo:latest /bin/bash
 ```
-Inside the container, in `/opt/scripts`, there are several sub folder, each of which is the testing/demo scripts of a module.
+**Inside the container**, in `/opt/scripts`, there are several sub folder, each of which is the testing/demo scripts of a module.
 
 ## 1. Data pre-filtering: synthetic speech detection
 We utlized the algorithm propposed in [Towards End-to-End Synthetic Speech Detection](https://arxiv.org/abs/2106.06341) and adopted the library and pre-trained models in authors's github [repo](https://github.com/ghuawhu/end-to-end-synthetic-speech-detection). The original work achieved synthetic speech detection EER as low as 2.16% on in-domain testing data and 1.95% on cross-domain data. We developped a simple demo script to run a part of the [ASVspoof2019](https://datashare.ed.ac.uk/handle/10283/3336) and give out the detection results and likelihood. 
 
-If the full testing is needed please run the codes in original authors' [repo](https://github.com/ghuawhu/end-to-end-synthetic-speech-detection). Please download the ASVspoof 2019 and 2015 data by running:
+If the full testing is needed please run the codes in original authors' [repo](https://github.com/ghuawhu/end-to-end-synthetic-speech-detection). Please download the ASVspoof 2019 and 2015 data by running following command **Inside the container**:
 ```bash
+cd /opt/scripts/synthetic_detection
 ./download.sh
 ```
-But if only want to see how the module is working, inside the container, please run the following command to sReference. Cite original paper & code.
+But if only want to see how the module is working, inside the container, please run the following command **Inside the container** to see how it works.
 ```bash
-cd synthetic_detection
+cd /opt/scripts/synthetic_detection
 ./run_demo.sh 
 ```  
 
 ## 2. Data pre-processing: music/vocal source separation
 
-We utilized well performed [spleeter](https://github.com/deezer/spleeter) library for source separation. The spleeter is source separation library of [Deezer](https://www.deezer.com/) and was introduced in ["Spleeter: a fast and efficient music source separation tool with pre-trained models"](https://www.researchgate.net/publication/342429039_Spleeter_a_fast_and_efficient_music_source_separation_tool_with_pre-trained_models). We post the script to run this tool on web scraped audio files. To run the tool with sample file, please run following command in docker container.
-
-
+We utilized well performed [spleeter](https://github.com/deezer/spleeter) library for source separation. The spleeter is source separation library of [Deezer](https://www.deezer.com/) and was introduced in ["Spleeter: a fast and efficient music source separation tool with pre-trained models"](https://www.researchgate.net/publication/342429039_Spleeter_a_fast_and_efficient_music_source_separation_tool_with_pre-trained_models). We post the script to run this tool on web scraped audio files. To run the tool with sample file, please run following command **Inside the container**.
 ```bash
 cd /opt/scripts/source_separation
 ./run_demo.sh
@@ -54,23 +53,23 @@ The script will try to separate each audio in **./sample_aduio** folders into tw
 ## 3. Data pre-filtering: language/accent identification
 We apply language identification to pre-filter the raw audio data and ensure that the data is correctly routed to the corresponding language data processing pipeline. We trained a language ID systme based on the x-vector, which was introduced in "[X-VECTORS: ROBUST DNN EMBEDDINGS FOR SPEAKER RECOGNITION](https://www.danielpovey.com/files/2018_icassp_xvectors.pdf)". The x-vector model was trained with the [VoxLingua107](https://arxiv.org/abs/2011.12998) dataset, and the language ID algorithm achieved 93% accuracy on the VoxLingua107 dev set. 
 
-The language id module was developped based on the Kaldi recipe. The model and x-vectors have been prepared and stored in this folder, to run the test and get EER, please run the command in below:
+The language id module was developped based on the Kaldi recipe. The model and x-vectors have been prepared and stored in this folder, to run the test and get EER, please run the command in below, **Inside the container**:
 ```bash
-cd language_id
+cd /opt/scripts/language_id
 ./run_test.sh
 ```  
-Accent identification is more challenging than language identification. We’ve  adopted  the  x-vector plus LDA/PLDA framework to detect twenty-two different English accents using proprietary data. Our current accent detection accuracy is 75%. The x-vector model and x-vectors of training and testing data were prepared and stored in this folder, same as LDA/PLDA classifier model. To check the performance, please run the command as in below:
+Accent identification is more challenging than language identification. We’ve  adopted  the  x-vector plus LDA/PLDA framework to detect twenty-two different English accents using proprietary data. Our current accent detection accuracy is 75%. The x-vector model and x-vectors of training and testing data were prepared and stored in this folder, same as LDA/PLDA classifier model. To check the performance, please run the command as in below **Inside the container**:
 ```bash
-cd accent_id
+cd /opt/scripts/accent_id
 ./run_test.sh
 ```
 
 ## 4. Data pre-tagging: speech detection
 This is the folder containing the demo scripts of speech segmentation. The speech segmentation in this folder is adopted from the InaSpeechSegmenter which was introduced in [AN OPEN-SOURCE SPEAKER GENDER DETECTION FRAMEWORK FOR MONITORING GENDER EQUALITY](https://hal.archives-ouvertes.fr/hal-01927560/document). We only used the speech detection module of it  and it's pretrained model, which can be found in the original authors' [repo](https://github.com/ina-foss/inaSpeechSegmenter).
 
-The inaSpeechSegmenter system won the first place in the Music and/or Speech Detection in Music Information Retrieval Evaluation eXchange 2018 (MIREX 2018). This module also achieved 97.5\% detection accuracy with an average boundary mismatch of 97ms at Appen's proprietary testset. To run demo of this module, please run the following command:
+The inaSpeechSegmenter system won the first place in the Music and/or Speech Detection in Music Information Retrieval Evaluation eXchange 2018 (MIREX 2018). This module also achieved 97.5\% detection accuracy with an average boundary mismatch of 97ms at Appen's proprietary testset. To run demo of this module, please run the following command **Inside the container**:
 ```bash
-cd speech_detection
+cd /opt/scripts/speech_detection
 ./run_demo.sh
 ```
 You can check the output csv file in folder ./output
@@ -82,36 +81,41 @@ The speaker diarization framework generally involves an embedding stage followed
 
 We tested the pipeline with [VoxConverse corpus](http://www.robots.ox.ac.uk/~vgg/data/voxconverse), which is an audio-visual diarization dataset consisting of over 50 hours of multi-speaker clips of human speech, extracted from videos collected on the internet.  The DER achieved on VoxConverse using the BUT system is 4.41%, which is consistent with the result in BUT's report.
 
-To download the dataset, please run the command as in following:
+To download the dataset, please run the command **Inside the container** as in following:
 ```bash
-cd speaker_diarization
+cd /opt/scripts/speaker_diarization
 ./download.sh
 ```
-After the data downloading, please run the test on VoxConverse data by running the commands in below:
+After the data downloading, please run the test on VoxConverse data by running the commands in below **Inside the container**:
 ```bash
+cd /opt/scripts/speaker_diarization
 ./run_test.sh
 ```  
 
 ## 6. Data pre-tagging: speaker clustering & identification
-Reference. Cite original paper & code.
+We utlized an ECAPA-TDNN embedding algorithm introduced in [Ecapa-tdnn: Emphasized channel412attention,  propagation and aggregation in tdnn based speaker verification](https://arxiv.org/abs/2005.07143) to generate speaker embeddings, which is used for speaker identification. A pre-trained embedding model by [SpeechBrain toolkit](https://github.com/speechbrain/speechbrain) is adopted in our pipeline, which produces EER of 0.7\% on VoxCeleb 1 dataset.
 
-
+Please download the VoxCeleb1 data and then run the test to check the system's performance **inside the container**
 ```bash
-
+cd /opt/scripts/SpeakerSec/
+./download.sh
+./run_test.sh
 ```  
 
 ## 7. Data pre-tagging: gender detection
-An x-vector embedding model plus Multi-layer Perceptron (MLP) classifier framework is implemented gender_detection folder. Our gender detection model235achieved 99.85% accuracy on VoxCeleb1 testing set in [VoxCeleb: a large-scale speaker identification dataset](https://arxiv.org/abs/1706.08612), which can be downloaded by running
+An x-vector embedding model plus Multi-layer Perceptron (MLP) classifier framework is implemented gender_detection folder. We used the x-vector model introduced in "[X-VECTORS: ROBUST DNN EMBEDDINGS FOR SPEAKER RECOGNITION](https://www.danielpovey.com/files/2018_icassp_xvectors.pdf)". 
+The pretrained x-vector model was used to extract the x-vectors of training and test data for MLP. Our gender detection model achieved 99.85% accuracy on VoxCeleb1 testing set in [VoxCeleb: a large-scale speaker identification dataset](https://arxiv.org/abs/1706.08612). To run the test of gender detection and check results, please run the command **Inside the container**:
 
 ```bash
-./download.sh
+cd /opt/scripts/gender_detection
+./run_test.sh
 ```  
 
 
 ## 8. Data pre-tagging: speech recognition/transcription
-To run the experiments on Librispeech test-clean and test-other data with our own Chain model, please run the following command to download Librispeech data.
+To run the experiments on Librispeech test-clean and test-other data with our own Chain model, please run the following command to download Librispeech data **Inside the container**.
 ```bash
-cd /opt/asr_kaldichain
+cd /opt/scripts/asr_kaldichain
 ./download_prepare_extract.sh
 ```
 
@@ -122,10 +126,8 @@ In this module, we trained our own ASR model using Kaldi toolkit introduced in "
 To run the test on Librispeech test-other and test-clean data with our trained model, please run the following command.
 
 ```bash
+cd /opt/scripts/asr_kaldichain
 ./run_test.sh
-
-```bash
-
 ```  
 
 ## 9. Data pre-tagging: domain/topic detection
