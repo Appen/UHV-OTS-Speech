@@ -20,6 +20,7 @@ COPY speech_segmentation /opt/scripts/speech_segmentation
 COPY synthetic_detection /opt/scripts/synthetic_detection
 COPY SpeakerRec /opt/scripts/SpeakerRec 
 COPY language_id /opt/scripts/language_id
+COPY topic_detection /opt/scripts/topic_detection
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \

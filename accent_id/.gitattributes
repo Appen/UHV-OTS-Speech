@@ -1,0 +1,2 @@
+feat_new.txt filter=lfs diff=lfs merge=lfs -text
+rest filter=lfs diff=lfs merge=lfs -text

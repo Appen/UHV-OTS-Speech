@@ -116,3 +116,6 @@ youtube-search-python==1.4.6
 zipp==3.5.0
 tabulate
 intervaltree
+transformers
+pyarrow
+datasets
