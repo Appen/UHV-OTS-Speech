@@ -58,7 +58,8 @@ with open (batch_folder+'./spk2gender','w') as fid:
         print(ln)
         fid.write(ln+'\n')
 
-
+cmd_ln='/opt/kaldi/egs/librispeech/s5/utils/utt2spk_to_spk2utt.pl '+batch_folder+'./utt2spk > '+batch_folder+'./spk2utt'
+os.popen(cmd_ln)
 
     
     
