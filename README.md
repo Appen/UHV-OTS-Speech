@@ -113,17 +113,17 @@ cd /opt/scripts/gender_detection
 
 
 ## 8. Data pre-tagging: speech recognition/transcription
-To run the experiments on Librispeech test-clean and test-other data with our own Chain model, please run the following command to download Librispeech data **Inside the container**.
+To run the experiments on Librispeech test-clean and test-other data with our own Chain model, please run the following command to download Librispeech data **inside the container**.
 ```bash
 cd /opt/scripts/asr_kaldichain
 ./download_prepare_extract.sh
 ```
 
-The test-clean and test-other data will be downloaded inside the container.
+The test-clean and test-other data will be downloaded **inside the container**.
 
 In this module, we trained our own ASR model using Kaldi toolkit introduced in "[The kaldi speech recognition toolkit](https://www.danielpovey.com/files/2011_asru_kaldi.pdf)", specifically using the chain model recipe introduced in "[Purely sequence-trained neural networks for ASR based on lattice-free MMI](https://www.danielpovey.com/files/2016_interspeech_mmi.pdf)", which can be found originally in Kaldi's [repo](https://github.com/kaldi-asr/kaldi). But we trained our model using 11 corpora at hand, including free public corpora, purchased corpora, and self owned corpora.
 
-To run the test on Librispeech test-other and test-clean data with our trained model, please run the following command.
+To run the test on Librispeech test-other and test-clean data with our trained model, please run the following command, **inside the container**.
 
 ```bash
 cd /opt/scripts/asr_kaldichain
@@ -131,11 +131,13 @@ cd /opt/scripts/asr_kaldichain
 ```  
 
 ## 9. Data pre-tagging: domain/topic detection
+So far we adopted a pipeline of topic detection of Multi-label Text Classification using BERT introduced in [webpage](https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d). It was developped by original author based on the [BERT](https://arxiv.org/abs/1810.04805). It applied BERT to the problem of multi-label text classification. We assembled the original scripts from the [repo](https://gist.github.com/kaushaltrivedi) to replicate the [Kaggle’s Toxic Comment Classification Challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge) to benchmark BERT’s performance for the multi-label text classification.
 
-Coming soon.
-
+To run the benchmark test, please run the following commands **inside the container**
 
 ```bash
+cd /opt/scripts/topic_detection
+./run_test.sh
 
 ```  
 
