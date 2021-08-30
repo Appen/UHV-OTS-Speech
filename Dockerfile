@@ -21,6 +21,8 @@ COPY synthetic_detection /opt/scripts/synthetic_detection
 COPY SpeakerRec /opt/scripts/SpeakerRec 
 COPY language_id /opt/scripts/language_id
 COPY topic_detection /opt/scripts/topic_detection
+COPY generate_kaldi_file.py /opt/scripts
+COPY sample_dataset /opt/sample_dataset
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \

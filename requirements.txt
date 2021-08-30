@@ -105,7 +105,7 @@ typer==0.3.2
 typing==3.7.4.3
 typing-extensions==3.10.0.0
 uisrnn==0.1.0
-urllib3==1.25.8
+urllib3
 virtualenv==20.6.0
 webrtcvad==2.0.10
 Werkzeug==2.0.1
