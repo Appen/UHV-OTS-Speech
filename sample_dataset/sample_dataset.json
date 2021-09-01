@@ -9,11 +9,7 @@
         "clothing":0.16,
     },
    "Topics_by_speakers": {               
-        "sports":52, 
-        "culture":76, 
-        "education":50, 
-        "finance":48, 
-        "food":84
+        "clothing":2, 
     },
    "gender_dist_by_hours": { "male": 0.105, "female": 0.041}, 
    "gender_dist_by_speakers": { "male": 1, "female": 1}, 
