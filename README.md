@@ -19,11 +19,11 @@ This paper introduces a human-in-the-loop (HITL) data annotation pipeline to gen
 We use docker to run all the experiments and data processing for the corpora construction. To illustrate the algorithms used in the automatic modules in our pipeline, we build this docker enveronment containing all the testing scripts or demo scripts of each module. After you git cloned this repo, please run the docker build command like in below.
 ```bash
 cd UHV-OTS-Speech
-docker build -t uhv-ots-speech-demo:latest ./
+docker build -t uhv-ots-speech-demo:cpu ./
 ```  
 After the images has been built, please docker run the image in a container with GPU availability.
 ```bash
-docker run -it --gpus device=0 uhv-ots-speech-demo:latest /bin/bash
+docker run -it uhv-ots-speech-demo:cpu /bin/bash
 ```
 **Inside the container**, in `/opt/scripts`, there are several sub folder, each of which is the testing/demo scripts of a module.
 
