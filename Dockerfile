@@ -14,7 +14,7 @@ COPY requirements.txt /opt
 RUN mkdir -p /opt/scripts
 COPY asr_kaldichain /opt/scripts/asr_kaldichain
 COPY gender_detection /opt/scripts/gender_detection
-COPY source_separation /opt/scripts/source_separation
+#COPY source_separation /opt/scripts/source_separation
 COPY speaker_diarization /opt/scripts/speaker_diarization
 COPY speech_segmentation /opt/scripts/speech_segmentation
 COPY synthetic_detection /opt/scripts/synthetic_detection
@@ -23,6 +23,8 @@ COPY language_id /opt/scripts/language_id
 COPY topic_detection /opt/scripts/topic_detection
 COPY generate_kaldi_file.py /opt/scripts
 COPY sample_dataset /opt/sample_dataset
+COPY spleeter /opt/spleeter
+RUN  ln -s /opt/spleeter /opt/scripts/source_separation
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
@@ -58,7 +60,7 @@ RUN apt-get update && \
     add-apt-repository -y ppa:deadsnakes/ppa && \
     apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
-        python3.8 python3.8-dev python3.8-distutils && \
+        python3.8 python3.8-dev python3.8-distutils python3.8-venv && \
     ln -fs /usr/bin/python3.8 /usr/bin/python3 && \
     ln -fs /usr/bin/python2.7 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/* && \
@@ -68,8 +70,10 @@ RUN apt-get update && \
     python3 -m pip install wheel && \
     # PYGOBJECT_WITHOUT_PYCAIRO=1 python3 -m pip install --no-build-isolation --no-use-pep517 PyGObject==3.36.0 && \
     python3 -m pip install -r requirements.txt && \
-    python3 -m pip install speechbrain sklearn xgboost && \
-    cd /opt && git clone https://github.com/ghuawhu/end-to-end-synthetic-speech-detection.git && \
+    python3 -m pip install speechbrain sklearn xgboost
+#RUN cd /opt/spleeter && poetry update && poetry install 
+
+RUN cd /opt && git clone https://github.com/ghuawhu/end-to-end-synthetic-speech-detection.git && \
     /bin/bash -c "virtualenv -p python3 inaSpeechSegEnv && \
     source inaSpeechSegEnv/bin/activate && \
     python3 -m pip install tensorflow-gpu && \

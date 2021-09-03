@@ -12,7 +12,8 @@ voxceleb_source: /data/VoxCeleb/VoxCeleb1
 data_folder: /data/VoxCeleb/VoxCeleb1 
 output_folder: results/voxceleb1_2/speaker_verification_ecapa_big
 save_folder: !ref <output_folder>/save/
-device: 'cuda:0'
+device: 'cpu'
+#device: 'cuda:0'
 
 # Use the following links for the official voxceleb splits:
 # VoxCeleb1 (cleaned): https://www.robots.ox.ac.uk/~vgg/data/voxceleb/meta/veri_test2.txt

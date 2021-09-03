@@ -183,9 +183,9 @@ if __name__ == '__main__':
     data_path = sys.argv[3]
 
 
-    test_device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    #test_device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     #test_device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
-    #test_device = torch.device('cpu')
+    test_device = torch.device('cpu')
     
     print("\n")
     print("  model_file = ", model_file)
@@ -199,7 +199,7 @@ if __name__ == '__main__':
     num_total_learnable_params = sum(i.numel() for i in Net.parameters() if i.requires_grad)
     #print('Number of learnable params: {}.'.format(num_total_learnable_params))
 
-    check_point = torch.load(model_file)
+    check_point = torch.load(model_file,map_location='cpu')
     #print("  check_point = ", check_point)
    
     check_point_model_state_dict = check_point['model_state_dict']
