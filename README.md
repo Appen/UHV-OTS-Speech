@@ -151,7 +151,7 @@ A script `generate_kaldi_file.py` was provided to generate the Kaldi format docu
 ```bash
 ./generate_kaldi_file.py path-to-batch-data
 ```
-In this repo, we prepared a sample of batch data, you can try the converting script on that folder to check the generated Kaldi documents.
+In this repo, we prepared a sample of batch data in `./sample_dataset`, you can try the converting script on that folder to check the generated Kaldi documents.
 
 # Speech Annotation Instruction
 
