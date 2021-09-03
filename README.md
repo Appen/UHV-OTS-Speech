@@ -147,6 +147,11 @@ Detailed exaplanation of UHV-OTS dataset format is [attached here](./datasetform
 
 
 # Sample codes to parse UHV-OTS dataset to Kaldi style format
+A script `generate_kaldi_file.py` was provided to generate the Kaldi format documents to run a Kaldi experiments. After you acquired a batch of UHV-OTS-Speehc data, you can run this script as in follow:
+```bash
+./generate_kaldi_file.py path-to-batch-data
+```
+In this repo, we prepared a sample of batch data, you can try the converting script on that folder to check the generated Kaldi documents.
 
 # Speech Annotation Instruction
 
