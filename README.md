@@ -21,7 +21,7 @@ We use docker to run all the experiments and data processing for the corpora con
 cd UHV-OTS-Speech
 docker build -t uhv-ots-speech-demo:cpu ./
 ```  
-After the images has been built, please docker run the image in a container with GPU availability.
+After the images has been built, please docker run the image in a container.
 ```bash
 docker run -it uhv-ots-speech-demo:cpu /bin/bash
 ```
