@@ -172,4 +172,15 @@ Dataset consumers can visit https://appen.com/off-the-shelf-datasets/ to order e
 
 Appen will donate a number of free speech datasets from the UHV-OTS each year to support academic and open source community research under the CC-BY-SA license. These free datasets will be downloadable from Appen's https://appen.com/open-source-datasets/ website. The first batch of free available dataset will be released in late of 2021.  
 
-# References
+# Notes
+
+Please kindly cite our paper if you use the code or data in your research project
+
+```
+@inproceedings{uhvspeech-arxiv,
+      title={Scalable Data Annotation Pipeline for High-Quality Large Speech Datasets Development}, 
+      author={Mingkuan Liu and Chi Zhang and Hua Xing and Chao Feng and Monchu Chen and Judith Bishop and Grace Ngapo},
+      booktitle={arXiv:2109.01164},
+      year={2021}
+}
+```
