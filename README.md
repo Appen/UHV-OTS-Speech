@@ -98,7 +98,7 @@ We utlized an ECAPA-TDNN embedding algorithm introduced in [Ecapa-tdnn: Emphasiz
 
 Please download the VoxCeleb1 data and then run the test to check the system's performance **inside the container**
 ```bash
-cd /opt/scripts/SpeakerSec/
+cd /opt/scripts/SpeakerRec/
 ./download.sh
 ./run_test.sh
 ```  
