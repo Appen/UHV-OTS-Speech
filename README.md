@@ -45,6 +45,7 @@ cd /opt/scripts/synthetic_detection
 
 We utilized well performed [spleeter](https://github.com/deezer/spleeter) library for source separation. The spleeter is source separation library of [Deezer](https://www.deezer.com/) and was introduced in ["Spleeter: a fast and efficient music source separation tool with pre-trained models"](https://www.researchgate.net/publication/342429039_Spleeter_a_fast_and_efficient_music_source_separation_tool_with_pre-trained_models). We post the script to run this tool on web scraped audio files. To run the tool with sample file, please run following command **Inside the container**.
 ```bash
+
 cd /opt/scripts/source_separation
 ./run_demo.py
 ```  
@@ -69,7 +70,7 @@ This is the folder containing the demo scripts of speech segmentation. The speec
 
 The inaSpeechSegmenter system won the first place in the Music and/or Speech Detection in Music Information Retrieval Evaluation eXchange 2018 (MIREX 2018). This module also achieved 97.5\% detection accuracy with an average boundary mismatch of 97ms at Appen's proprietary testset. To run demo of this module, please run the following command **Inside the container**:
 ```bash
-cd /opt/scripts/speech_detection
+cd /opt/scripts/speech_segmentation
 ./run_demo.sh
 ```
 You can check the output csv file in folder ./output
@@ -97,7 +98,7 @@ We utlized an ECAPA-TDNN embedding algorithm introduced in [Ecapa-tdnn: Emphasiz
 
 Please download the VoxCeleb1 data and then run the test to check the system's performance **inside the container**
 ```bash
-cd /opt/scripts/SpeakerSec/
+cd /opt/scripts/SpeakerRec/
 ./download.sh
 ./run_test.sh
 ```  
@@ -171,4 +172,15 @@ Dataset consumers can visit https://appen.com/off-the-shelf-datasets/ to order e
 
 Appen will donate a number of free speech datasets from the UHV-OTS each year to support academic and open source community research under the CC-BY-SA license. These free datasets will be downloadable from Appen's https://appen.com/open-source-datasets/ website. The first batch of free available dataset will be released in late of 2021.  
 
-# References
+# Notes
+
+Please kindly cite our paper if you use the code or data in your research project
+
+```
+@inproceedings{uhvspeech-arxiv,
+      title={Scalable Data Annotation Pipeline for High-Quality Large Speech Datasets Development}, 
+      author={Mingkuan Liu and Chi Zhang and Hua Xing and Chao Feng and Monchu Chen and Judith Bishop and Grace Ngapo},
+      booktitle={arXiv:2109.01164},
+      year={2021}
+}
+```
