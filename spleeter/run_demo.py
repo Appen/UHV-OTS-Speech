@@ -10,11 +10,11 @@ from spleeter.separator import Separator
 # Using embedded configuration.
 separator = Separator('spleeter:2stems')
 
-input_dir = /opt/scripts/source_separation/sample_audio #sys.argv[1]
-output_dir = /opt/scripts/source_separation/output #sys.argv[2]
+input_dir = '/opt/scripts/source_separation/sample_audio' #sys.argv[1]
+output_dir = '/opt/scripts/source_separation/output' #sys.argv[2]
 
 
-all_wav = glob.glob(input_dir+"*.wav")
+all_wav = glob.glob(input_dir+"/*.wav")
 if len(all_wav) ==0:
     print('No wav files in '+input_dir)
     exit()
