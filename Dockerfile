@@ -20,6 +20,7 @@ COPY speech_segmentation /opt/scripts/speech_segmentation
 COPY synthetic_detection /opt/scripts/synthetic_detection
 COPY SpeakerRec /opt/scripts/SpeakerRec 
 COPY language_id /opt/scripts/language_id
+COPY accent_id /opt/scripts/accent_id
 COPY topic_detection /opt/scripts/topic_detection
 COPY generate_kaldi_file.py /opt/scripts
 COPY sample_dataset /opt/sample_dataset

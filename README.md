@@ -46,7 +46,7 @@ cd /opt/scripts/synthetic_detection
 We utilized well performed [spleeter](https://github.com/deezer/spleeter) library for source separation. The spleeter is source separation library of [Deezer](https://www.deezer.com/) and was introduced in ["Spleeter: a fast and efficient music source separation tool with pre-trained models"](https://www.researchgate.net/publication/342429039_Spleeter_a_fast_and_efficient_music_source_separation_tool_with_pre-trained_models). We post the script to run this tool on web scraped audio files. To run the tool with sample file, please run following command **Inside the container**.
 ```bash
 cd /opt/scripts/source_separation
-./run_demo.sh
+./run_demo.py
 ```  
 The script will try to separate each audio in **./sample_aduio** folders into two files, one  **\*\_bgm.wav** one **\*\_speech.wav**, both in **mono 16kHz 16bit liner PCM wav** format. The rest of automatic processing will be performed on the  **\*\_speech.wav** file, which is considered to be the speech channel of original audio. 
 
