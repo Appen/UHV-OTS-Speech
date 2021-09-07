@@ -69,7 +69,7 @@ This is the folder containing the demo scripts of speech segmentation. The speec
 
 The inaSpeechSegmenter system won the first place in the Music and/or Speech Detection in Music Information Retrieval Evaluation eXchange 2018 (MIREX 2018). This module also achieved 97.5\% detection accuracy with an average boundary mismatch of 97ms at Appen's proprietary testset. To run demo of this module, please run the following command **Inside the container**:
 ```bash
-cd /opt/scripts/speech_detection
+cd /opt/scripts/speech_segmentation
 ./run_demo.sh
 ```
 You can check the output csv file in folder ./output
