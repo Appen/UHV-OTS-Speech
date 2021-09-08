@@ -26,7 +26,8 @@ COPY generate_kaldi_file.py /opt/scripts
 COPY sample_dataset /opt/sample_dataset
 COPY spleeter /opt/spleeter
 RUN  ln -s /opt/spleeter /opt/scripts/source_separation
-
+RUN  mkdir -p /opt/scripts/source_separation/output && mkdir -p /opt/scripts/speech_segmentation/output
+ 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get install -y --no-install-recommends \
         build-essential \
