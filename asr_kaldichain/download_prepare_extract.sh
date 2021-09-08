@@ -5,6 +5,7 @@
 data_url=www.openslr.org/resources/12
 data=/data/
 mfccdir=mfcc
+mkdir -p $data
 
 for part in test-clean test-other; do
   local/download_and_untar.sh $data $data_url $part
