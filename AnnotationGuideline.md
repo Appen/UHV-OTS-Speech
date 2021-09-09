@@ -36,8 +36,8 @@ This batch contains a hypothesis in the text box. Edit the transcription to matc
 ### Transcription Rules and Tips
 | Category | Audio Clip | Correct Transcription |
 | -------- | ---------- | --------------------- |
-| **Self-correction•** When the user self-corrects, transcribe everything the user says	Will would you open spotify	will would you open spotify |
-| **Numerals•** Words or phrases should be the spelled-out version	891 oh 2 |	eighty nine one o two |
+| **Self-correction•** When the user self-corrects, transcribe everything the user says	| Will would you open spotify	| will would you open spotify |
+| **Numerals•** Words or phrases should be the spelled-out version	| 891 oh 2 |	eighty nine one o two |
 | **Time and Date Phrases•** Words or phrases should be transcribed as the user says |	7:00 1/2/2019	| seven o’clock january second twenty nineteen (or january second two thousand nineteen based on the audio |
 | **Contractions•** When encountering contractions, do not split the contraction into two words. We should be transcribeing exactly what we hear	| i'm gonna leave i'm going to leave	| i'm gonna leave i'm going to leave |
 | **Acronyms•** Acronyms that are pronounced as an actual word instead of as a sequence of letters will be transcribed as one word |	NASA SCUBA |	nasa scuba |
