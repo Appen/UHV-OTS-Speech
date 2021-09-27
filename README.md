@@ -170,7 +170,12 @@ The UHV-OTS speech corpora development is an ongoing, long-term Appen project to
 
 Dataset consumers can visit https://appen.com/off-the-shelf-datasets/ to order existing datasets or contact us to discuss their specific dataset needs. Appen will consolidate those needs and adjust our UHV-OTS delivery pipeline accordingly, to deliver datasets of highest demand.  
 
-Appen will donate a number of free speech datasets from the UHV-OTS each year to support academic and open source community research under the CC-BY-SA license. These free datasets will be downloadable from Appen's https://appen.com/open-source-datasets/ website. The first batch of free available dataset will be released in late of 2021.  
+Appen will donate a number of free speech datasets from the UHV-OTS each year to support academic and open source community research under the CC-BY-SA license. These free datasets will be downloadable from Appen's https://appen.com/open-source-datasets/ website. The first batch of free available dataset will be released in late of 2021 and announced at this github repo.  
+
+# UHV-OTS datasets demands feedback
+
+The continuous nature of UHV-OTS corpora development will allow us to serve commercial and academic demands more quickly and effectively. Dataset consumers can inform us your specific speech datasets need at [here](./demands-feedback.md). Appen will consolidate these inputs and adjust our UHV-OTS delivery pipeline accordingly to ensure our speech corpora meets the most common needs of consumers. 
+
 
 # Notes
 
