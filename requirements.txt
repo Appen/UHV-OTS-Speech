@@ -55,7 +55,7 @@ onnxruntime==1.8.1
 opt-einsum==3.3.0
 packaging==21.0
 pandas==1.1.2
-Pillow==8.3.1
+Pillow==9.0.0
 pipreqs==0.4.10
 platformdirs==2.0.2
 pooch==1.4.0
