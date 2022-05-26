@@ -93,7 +93,7 @@ supervisor==4.1.0
 tensorboard==2.6.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
-tensorflow==2.5.1
+tensorflow==2.7.2
 tensorflow-estimator==2.5.0
 termcolor==1.1.0
 threadpoolctl==2.2.0
