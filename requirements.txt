@@ -28,7 +28,7 @@ h2==3.2.0
 h5py~=3.1.0
 hpack==3.0.0
 httpcore==0.12.3
-httpx==0.16.1
+httpx==0.23.0
 huggingface-hub==0.0.15
 hyperframe==5.2.0
 HyperPyYAML==1.0.0
