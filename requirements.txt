@@ -60,7 +60,7 @@ pipreqs==0.4.10
 platformdirs==2.0.2
 pooch==1.4.0
 proglog==0.1.9
-protobuf==3.17.3
+protobuf==3.18.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
