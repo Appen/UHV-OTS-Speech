@@ -36,7 +36,7 @@ idna==2.8
 imageio==2.9.0
 imageio-ffmpeg==0.4.4
 importlib-metadata==4.6.1
-joblib==1.0.1
+joblib==1.2.0
 kaldi-io==0.9.4
 Keras-Preprocessing==1.1.2
 kiwisolver==1.3.1
