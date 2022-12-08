@@ -5,7 +5,7 @@ astunparse==1.6.3
 audioread==2.1.9
 backports.entry-points-selectable==1.1.0
 cachetools==4.2.2
-certifi==2019.11.28
+certifi==2022.12.7
 cffi==1.14.6
 chardet==3.0.4
 charset-normalizer==2.0.3
