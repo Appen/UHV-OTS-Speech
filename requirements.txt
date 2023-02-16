@@ -107,7 +107,7 @@ uisrnn==0.1.0
 urllib3
 virtualenv==20.6.0
 webrtcvad==2.0.10
-Werkzeug==2.0.1
+Werkzeug==2.2.3
 wrapt==1.12.1
 yarg==0.1.9
 youtube-dl==2021.6.6
